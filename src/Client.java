@@ -1,26 +1,25 @@
 public class Client {
     public static void main(String[] args) throws Exception {
-        AbstractFactory hollywoodFactory = FactoryProducer.getFactory("Hollywood");
+        MovieFactoryInterface actionFactory = FactoryProducer.getFactory("action");
+        MovieFactoryInterface comedyFactory = FactoryProducer.getFactory("comedy");
+        MovieFactoryInterface dramaFactory = FactoryProducer.getFactory("drama");
 
-        Hollywood hollywoodActionMovie = hollywoodFactory.getHollywoodMovie("action");
-       hollywoodActionMovie.getMovieName();
+        HollywoodMovieInterface hollywoodActionMovie = actionFactory.getHollywoodMovie();
+        hollywoodActionMovie.getMovieName();
 
-        Hollywood hollywoodComedyMovie = hollywoodFactory.getHollywoodMovie("comedy");
-        hollywoodComedyMovie.getMovieName();
-
-        Hollywood hollywoodDramaMovie = hollywoodFactory.getHollywoodMovie("drama");
-        hollywoodDramaMovie.getMovieName();
-
-        AbstractFactory bollywoodFactory = FactoryProducer.getFactory("bollywood");
-
-        Bollywood bollywoodActionMovie = bollywoodFactory.getBollywoodMovie("action");
+        BollywoodMovieInterface bollywoodActionMovie = actionFactory.getBollywoodMovie();
         bollywoodActionMovie.getMovieName();
 
-        Bollywood bollywoodComedyMovie = bollywoodFactory.getBollywoodMovie("comedy");
+        HollywoodMovieInterface hollywoodComedyMovie = comedyFactory.getHollywoodMovie();
+        hollywoodComedyMovie.getMovieName();
+
+        BollywoodMovieInterface bollywoodComedyMovie = comedyFactory.getBollywoodMovie();
         bollywoodComedyMovie.getMovieName();
 
-        Bollywood bollywoodDramaMovie = bollywoodFactory.getBollywoodMovie("drama");
-        bollywoodDramaMovie.getMovieName();
+        HollywoodMovieInterface hollywoodDramaMovie = dramaFactory.getHollywoodMovie();
+        hollywoodDramaMovie.getMovieName();
 
+        BollywoodMovieInterface bollywoodDramaMovie = dramaFactory.getBollywoodMovie();
+        bollywoodDramaMovie.getMovieName();
     }
 }

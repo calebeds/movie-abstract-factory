@@ -1,10 +1,10 @@
-public interface Hollywood  {
+public interface HollywoodMovieInterface {
     void getMovieName();
 }
 
 
 
-class HollywoodComedyMovie implements Hollywood {
+class HollywoodComedyMovie implements HollywoodMovieInterface {
 
     @Override
     public void getMovieName() {
@@ -12,7 +12,7 @@ class HollywoodComedyMovie implements Hollywood {
     }
 }
 
-class HollywoodActionMovie implements Hollywood {
+class HollywoodActionMovie implements HollywoodMovieInterface {
 
     @Override
     public void getMovieName() {
@@ -20,7 +20,7 @@ class HollywoodActionMovie implements Hollywood {
     }
 }
 
-class HollywoodDramaMovie implements Hollywood {
+class HollywoodDramaMovie implements HollywoodMovieInterface {
 
     @Override
     public void getMovieName() {

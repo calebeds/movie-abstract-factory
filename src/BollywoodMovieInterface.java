@@ -1,8 +1,8 @@
-public interface Bollywood {
+public interface BollywoodMovieInterface {
     void getMovieName();
 }
 
-class BollywoodComedyMovie implements Bollywood {
+class BollywoodComedyMovie implements BollywoodMovieInterface {
 
     @Override
     public void getMovieName() {
@@ -10,7 +10,7 @@ class BollywoodComedyMovie implements Bollywood {
     }
 }
 
-class BollywoodActionMovie implements Bollywood {
+class BollywoodActionMovie implements BollywoodMovieInterface {
 
     @Override
     public void getMovieName() {
@@ -18,7 +18,7 @@ class BollywoodActionMovie implements Bollywood {
     }
 }
 
-class BollywoodDramaMovie implements Bollywood {
+class BollywoodDramaMovie implements BollywoodMovieInterface {
 
     @Override
     public void getMovieName() {
